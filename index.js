@@ -9,7 +9,13 @@ app.use(cors())
 app.get('/',(req,res)=>{
     res.send('Welcome in Crud')
 })
+
+
+const AuthorRouter = require('./routes/Author.routes')
 const connection = require('./config')
+
+app.use('/author',AuthorRouter)
+
 const PORT = process.env.PORT || 8080
 
 app.listen(PORT,async()=>{
