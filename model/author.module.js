@@ -4,7 +4,8 @@ require('dotenv').config()
 mongoose.set('strictQuery', true)
 
 const AuthorSchema = new mongoose.Schema({
-    Name:{type:String,required:true}
+    Name:{type:String,required:true},
+    
 })
 
 

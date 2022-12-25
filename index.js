@@ -10,11 +10,12 @@ app.get('/',(req,res)=>{
     res.send('Welcome in Crud')
 })
 
-
+const bookRouter = require('./routes/book.routes')
 const AuthorRouter = require('./routes/Author.routes')
 const connection = require('./config')
 
 app.use('/author',AuthorRouter)
+app.use('/book',bookRouter)
 
 const PORT = process.env.PORT || 8080
 
